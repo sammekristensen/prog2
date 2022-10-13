@@ -21,8 +21,8 @@ class Person(object):
 	def __del__(self):
 		return lib.Person_delete(self.obj)
 
-def fib_py(age):
-	if age <=1:
-		return age
-	else:
-		return(fib_py(age-1) - fib_py(age-2))
+	def fib_py(age):
+		if age <=1:
+			return age
+		else:
+			return(fib_py(age-1) - fib_py(age-2))
