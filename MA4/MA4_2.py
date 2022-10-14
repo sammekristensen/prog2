@@ -11,12 +11,6 @@ def fib_py(n):
 	else:
 		return (fib_py(n-1) + fib_py(n-2))
 
-@njit
-def fib_numba(n):
-	if n <= 1:
-		return n
-	else:
-		return (fib_py(n-1) + fib_py(n-2))
 
 def main():
 	n=30
@@ -37,5 +31,12 @@ def main():
 
 	print(f"fib of {n} is:{fib_numba(n)}")
 
+	@njit
+	def fib_numba(n):
+		if n <= 1:
+			return n
+		else:
+			return (fib_py(n-1) + fib_py(n-2))
+	
 if __name__ == '__main__':
 	main()
