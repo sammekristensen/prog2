@@ -51,6 +51,8 @@ def main():
 		time3=round(end3-start3,2)
 		fib_numba_lst.append(time3)
 
+		print(f"done with fib({n})")
+
 	nnn=list(range(20,30+1))
 	
 	fig1, axs = plt.subplots(2,2)
