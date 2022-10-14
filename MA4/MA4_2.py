@@ -17,10 +17,10 @@ def main():
 	#f.set(9)
 	#print(f.get())
 
-	#start1=pc()
+	start1=pc()
 	print(f"fib of {n} is: {f.fib()}")
-	#end1=pc()
-	#print(f"time for c++: {round(end1-start1,2)}")
+	end1=pc()
+	print(f"time for c++: {round(end1-start1,2)}")
 
 	start2=pc()
 	print(fib_py(n))
