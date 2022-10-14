@@ -53,12 +53,12 @@ def main():
 	nnn=list(range(20,30+1))
 	
 	fig1, axs = plt.subplots(2,2)
-	axs[0].stem(nn,fib_py_lst,linefmt='--')
-	axs[0].set_title('fib_py')
-	axs[1].stem(nn,fib_numba_lst,linefmt='--')
-	axs[1].set_title('fib_numba')
-	axs[2].stem(nn,fib_cpp_lst,linefmt='--')
-	axs[2].set_title('fib_cpp')
+	axs[0,0].stem(nn,fib_py_lst,linefmt='--')
+	axs[0,0].set_title('fib_py')
+	axs[0,1].stem(nn,fib_numba_lst,linefmt='--')
+	axs[0,1].set_title('fib_numba')
+	axs[1,0].stem(nn,fib_cpp_lst,linefmt='--')
+	axs[1,0].set_title('fib_cpp')
 	fig1.savefig("the_barchart.jpeg")
 
 	
