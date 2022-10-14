@@ -37,7 +37,10 @@ def main():
 	end2=pc()
 	print(f"time for fib_py, calculated in py: {round(end2-start2,2)}")
 	
+	start3=pc()
 	print(f"fib of {n} is:{fib_numba(n)}")
+	end3=pc()
+	print(f"time for fib_numba, calculated in py: {round(end3-start3,2)}")
 
 if __name__ == '__main__':
 	main()
