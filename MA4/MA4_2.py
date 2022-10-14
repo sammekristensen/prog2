@@ -23,7 +23,7 @@ def fib_numba(n):
 
 def main():
 
-	nn = list(range(20,30+1))
+	nn = list(range(30,45+1))
 	fib_py_lst=[]
 	fib_numba_lst=[]
 	fib_cpp_lst=[]
@@ -49,15 +49,17 @@ def main():
 		end3=pc()
 		time3=round(end3-start3,2)
 		fib_numba_lst.append(time3)
+
+	nnn=list(range(20,30+1))
 	
-	fig, axs = plt.subplots(2,2)
+	fig1, axs = plt.subplots(2,2)
 	axs[0,0].stem(nn,fib_py_lst,linefmt='--')
 	axs[0,0].set_title('fib_py')
 	axs[0,1].stem(nn,fib_numba_lst,linefmt='--')
 	axs[0,1].set_title('fib_numba')
 	axs[1,:].stem(nn,fib_cpp_lst,linefmt='--')
 	axs[1,0].set_title('fib_cpp')
-	fig.savefig("the_barchart.jpeg")
+	fig1.savefig("the_barchart.jpeg")
 
 	
 
