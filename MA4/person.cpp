@@ -28,11 +28,11 @@ int Person::fib(){
 	return fib_(age);
 	}
 
-int Person::fib_(int age){
-    		if (age <= 1){
+int Person::fib_(int n){
+    		if (n <= 1){
 				return age;
 			}else{
-				return (fib_(age-1) + fib_(age-2));
+				return (fib_(n-1) + fib_(n-2));
 
 			}
 		};
