@@ -50,11 +50,15 @@ def main():
 		time3=round(end3-start3,2)
 		fib_numba_lst.append(time3)
 	
-	fig, axs = plt.subplots(3)
-	axs[0].plot(n,fib_py_lst)
-	axs[1].plot(n,fib_numba_lst)
-	axs[2].plot(n,fib_cpp_lst)
-	fig.savefig("the_barchart.jpeg")
+	#fig, axs = plt.subplots(3)
+	#axs[0].plot(n,fib_py_lst)
+	#axs[1].plot(n,fib_numba_lst)
+	#axs[2].plot(n,fib_cpp_lst)
+	#fig.savefig("the_barchart.jpeg")
+	print(n)
+	print(fib_cpp_lst)
+	print(fib_numba_lst)
+	print(fib_py_lst)
 
 	
 
