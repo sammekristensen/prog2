@@ -28,7 +28,11 @@ def main():
 	fib_numba_lst=[]
 	fib_cpp_lst=[]
 
-	print(fib_py(30))
+	start2=pc()
+	fib_py(35)
+	end2=pc()
+	time2=round(end2-start2,2)
+	fib_py_lst.append(time2)
 
 #	for n in range(30,45+1):
 #
