@@ -3,11 +3,12 @@
 from person import Person
 
 def main():
-	f = Person(5)
+	n=5
+	f = Person(n)
 	print(f.get())
 	f.set(9)
 	print(f.get())
-	print(f.fib())
+	print(f"fib of {n} is: {f.fib()}")
 
 if __name__ == '__main__':
 	main()
