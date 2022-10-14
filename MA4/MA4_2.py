@@ -23,7 +23,7 @@ def fib_numba(n):
 
 def main():
 
-	n = list(range(20,30+1))
+	nn = list(range(20,30+1))
 	fib_py_lst=[]
 	fib_numba_lst=[]
 	fib_cpp_lst=[]
@@ -55,7 +55,7 @@ def main():
 	#axs[1].plot(n,fib_numba_lst)
 	#axs[2].plot(n,fib_cpp_lst)
 	#fig.savefig("the_barchart.jpeg")
-	print(n)
+	print(nn)
 	print(fib_cpp_lst)
 	print(fib_numba_lst)
 	print(fib_py_lst)
