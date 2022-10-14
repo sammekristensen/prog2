@@ -23,10 +23,10 @@ def fib_numba(n):
 
 def main():
 
-	nn = list(range(30,45+1))
-	fib_py_lst=[]
-	fib_numba_lst=[]
-	fib_cpp_lst=[]
+#	nn = list(range(30,45+1))
+#	fib_py_lst=[]
+#	fib_numba_lst=[]
+#	fib_cpp_lst=[]
 
 
 #	for n in range(30,45+1):
@@ -53,25 +53,25 @@ def main():
 #
 #		print(f"done with fib({n})")
 
-	nnn=list(range(20,30+1))
-	fib_py_lst2=[]
-	fib_numba_lst2=[]
+#	nnn=list(range(20,30+1))
+#	fib_py_lst2=[]
+#	fib_numba_lst2=[]
 
-	for n2 in range(20,30+1):
+#	for n2 in range(20,30+1):
 
-		start2=pc()
-		fib_py(n2)
-		end2=pc()
-		time2=round(end2-start2,2)
-		fib_py_lst2.append(time2)
-		
-		start3=pc()
-		fib_numba(n2)
-		end3=pc()
-		time3=round(end3-start3,2)
-		fib_numba_lst2.append(time3)
-
-		print(f"done with fib({n2})")
+#		start2=pc()
+#		fib_py(n2)
+#		end2=pc()
+#		time2=round(end2-start2,2)
+#		fib_py_lst2.append(time2)
+#		
+#		start3=pc()
+#		fib_numba(n2)
+#		end3=pc()
+#		time3=round(end3-start3,2)
+#		fib_numba_lst2.append(time3)
+#
+#		print(f"done with fib({n2})")
 
 
 	#fig1, axs = plt.subplots(2,2)
@@ -82,13 +82,19 @@ def main():
 	#axs[1,0].stem(nn,fib_cpp_lst,linefmt='--')
 	#axs[1,0].set_title('fib_cpp')
 	#fig1.savefig("the_barchart.jpeg")
+#
+#	fig2, axs = plt.subplots(2)
+#	axs[0].stem(nnn,fib_py_lst2,linefmt='--')
+#	axs[0].set_title('fib_py')
+#	axs[1].stem(nnn,fib_numba_lst2,linefmt='--')
+#	axs[1].set_title('fib_numba')
+#	fig2.savefig("thing2.jpeg")
 
-	fig2, axs = plt.subplots(2)
-	axs[0].stem(nnn,fib_py_lst2,linefmt='--')
-	axs[0].set_title('fib_py')
-	axs[1].stem(nnn,fib_numba_lst2,linefmt='--')
-	axs[1].set_title('fib_numba')
-	fig2.savefig("thing2.jpeg")
+	f = Person(47)
+	fib_cpp_ = f.fib()
+	fib_numba_ = fib_numba(47)
+	print(f"fib(47) using c++: {fib_cpp_}")
+	print(f"fib(47) using numba: {fib_numba_}")
 
 if __name__ == '__main__':
 	main()
