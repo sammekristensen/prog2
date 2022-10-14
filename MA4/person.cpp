@@ -30,7 +30,7 @@ int Person::fib(){
 
 int Person::fib_(int n){
     		if (n <= 1){
-				return age;
+				return n;
 			}else{
 				return (fib_(n-1) + fib_(n-2));
 
