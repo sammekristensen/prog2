@@ -10,7 +10,7 @@ def fib_py(n):
 		return (fib_py(n-1) + fib_py(n-1))
 
 def main():
-	n=5
+	n=9
 	f = Person(n)
 	print(f.get())
 	f.set(9)
