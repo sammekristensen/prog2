@@ -4,12 +4,10 @@ from tkinter import N
 from person import Person
 
 def fib_py(n):
-    if n ==0:
-        return 0
-    elif n ==1:
-         return 1
-    else:
-        return fib_py(n-1) + fib_py(n-2)
+	if n <= 1:
+		return n
+	else:
+		return (fib_py(n-1) + fib_py(n-1))
 
 def main():
 	n=5
