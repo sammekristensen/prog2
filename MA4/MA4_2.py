@@ -50,7 +50,7 @@ def main():
 		time3=round(end3-start3,2)
 		fib_numba_lst.append(time3)
 	
-	fig, axs = plt.subplots(3, sharex=True)
+	fig, axs = plt.subplots(3)
 	axs[0].stem(n,fib_py_lst)
 	axs[1].stem(n,fib_numba_lst)
 	axs[2].stem(n,fib_cpp_lst)
