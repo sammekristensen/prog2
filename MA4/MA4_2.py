@@ -11,6 +11,14 @@ def fib_py(n):
 	else:
 		return (fib_py(n-1) + fib_py(n-2))
 
+@njit
+def fib_numba(n):
+	if n <= 1:
+		return n
+	else:
+		return (fib_numba(n-1) + fib_numba(n-2))
+
+
 
 def main():
 	n=30
@@ -28,15 +36,8 @@ def main():
 	print(f"fib of {n} is:{fib_py(n)}")
 	end2=pc()
 	print(f"time for fib_py, calculated in py: {round(end2-start2,2)}")
-
-	@njit
-	def fib_numba(n):
-		if n <= 1:
-			return n
-		else:
-			return (fib_py(n-1) + fib_py(n-2))
-
-	print(f"fib of {n} is:{fib_numba(n)}")
 	
+	print(f"fib of {n} is:{fib_numba(n)}")
+
 if __name__ == '__main__':
 	main()
