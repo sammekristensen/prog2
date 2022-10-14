@@ -33,6 +33,7 @@ def main():
 	end2=pc()
 	time2=round(end2-start2,2)
 	fib_py_lst.append(time2)
+	print(time2)
 
 #	for n in range(30,45+1):
 #
