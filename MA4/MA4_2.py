@@ -51,9 +51,9 @@ def main():
 		fib_numba_lst.append(time3)
 	
 	fig, axs = plt.subplots(3)
-	axs[0].plot(nn,fib_py_lst)
-	axs[1].plot(nn,fib_numba_lst)
-	axs[2].plot(nn,fib_cpp_lst)
+	axs[0].stem(nn,fib_py_lst)
+	axs[1].stem(nn,fib_numba_lst)
+	axs[2].stem(nn,fib_cpp_lst)
 	fig.savefig("the_barchart.jpeg")
 
 	
