@@ -29,14 +29,14 @@ def main():
 	end2=pc()
 	print(f"time for fib_py, calculated in py: {round(end2-start2,2)}")
 
-	print(f"fib of {n} is:{fib_numba(n)}")
-
 	@njit
 	def fib_numba(n):
 		if n <= 1:
 			return n
 		else:
 			return (fib_py(n-1) + fib_py(n-2))
+
+	print(f"fib of {n} is:{fib_numba(n)}")
 	
 if __name__ == '__main__':
 	main()
