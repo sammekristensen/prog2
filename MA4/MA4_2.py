@@ -10,11 +10,11 @@ def fib_py(n):
 		return (fib_py(n-1) + fib_py(n-1))
 
 def main():
-	n=9
+	n=11
 	f = Person(n)
 	print(f.get())
-	f.set(9)
-	print(f.get())
+	#f.set(9)
+	#print(f.get())
 	print(f"fib of {n} is: {f.fib()}")
 	print(fib_py(n))
 
