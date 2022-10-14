@@ -11,7 +11,7 @@ def fib_py(n):
 		return (fib_py(n-1) + fib_py(n-2))
 
 def main():
-	n=11
+	n=30
 	f = Person(n)
 	print(f.get())
 	#f.set(9)
