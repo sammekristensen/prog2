@@ -4,6 +4,7 @@ from tkinter import N
 from person import Person
 from time import perf_counter as pc
 from numba import njit
+import matplotlib.pyplot as plt
 
 def fib_py(n):
 	if n <= 1:
@@ -21,26 +22,41 @@ def fib_numba(n):
 
 
 def main():
-	n=30
-	f = Person(n)
-	print(f.get())
-	#f.set(9)
-	#print(f.get())
 
-	start1=pc()
-	print(f"fib of {n} is, calculated in c++: {f.fib()}")
-	end1=pc()
-	print(f"time for c++: {round(end1-start1,2)}")
+	n = list(range(20,30+1))
+	fib_py_lst=[]
+	fib_numba_lst=[]
+	fib_cpp_lst=[]
 
-	start2=pc()
-	print(f"fib of {n} is:{fib_py(n)}")
-	end2=pc()
-	print(f"time for fib_py, calculated in py: {round(end2-start2,2)}")
+	for n in range(20,30):
+
+		f = Person(n)
+
+		start1=pc()
+		f.fib()
+		end1=pc()
+		time1=round(end1-start1,2)
+		fib_cpp_lst.append(time1)
+
+		start2=pc()
+		fib_py(n)
+		end2=pc()
+		time2=round(end2-start2,2)
+		fib_py_lst.append(time2)
+		
+		start3=pc()
+		fib_numba(n)
+		end3=pc()
+		time3=round(end3-start3,2)
+		fib_numba_lst.append(time3)
 	
-	start3=pc()
-	print(f"fib of {n} is:{fib_numba(n)}")
-	end3=pc()
-	print(f"time for fib_numba, calculated in py: {round(end3-start3,2)}")
+	fig, axs = plt.subplots(3, sharex=True, sharey=True)
+	axs[0].bar(n,fib_py_lst)
+	axs[1].bar(n,fib_numba_lst)
+	axs[2].bar(n,fib_cpp_lst)
+	fig.savefig("the_barchart.fig")
+
+	
 
 if __name__ == '__main__':
 	main()
