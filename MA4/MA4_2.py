@@ -28,7 +28,7 @@ def main():
 	fib_numba_lst=[]
 	fib_cpp_lst=[]
 
-	for n in range(20,30+1):
+	for n in range(30,45+1):
 
 		f = Person(n)
 
