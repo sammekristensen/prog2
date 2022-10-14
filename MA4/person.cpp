@@ -47,4 +47,5 @@ extern "C"{
 			person = nullptr;
 			}
 		}
+	int Person_fib(Person*person) {return person->fib();}
 	}
