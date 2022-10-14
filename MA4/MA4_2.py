@@ -54,7 +54,7 @@ def main():
 	axs[0].bar(n,fib_py_lst)
 	axs[1].bar(n,fib_numba_lst)
 	axs[2].bar(n,fib_cpp_lst)
-	fig.savefig("the_barchart.fig")
+	fig.savefig("the_barchart.jpeg")
 
 	
 
