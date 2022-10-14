@@ -28,45 +28,39 @@ def main():
 	fib_numba_lst=[]
 	fib_cpp_lst=[]
 
-	start2=pc()
-	fib_py(35)
-	end2=pc()
-	time2=round(end2-start2,2)
-	fib_py_lst.append(time2)
-	print(time2)
 
-#	for n in range(30,45+1):
-#
-#		f = Person(n)
-#
-#		start1=pc()
-#		f.fib()
-#		end1=pc()
-#		time1=round(end1-start1,2)
-#		fib_cpp_lst.append(time1)
-#
-#		start2=pc()
-#		fib_py(n)
-#		end2=pc()
-#		time2=round(end2-start2,2)
-#		fib_py_lst.append(time2)
-#		
-#		start3=pc()
-#		fib_numba(n)
-#		end3=pc()
-#		time3=round(end3-start3,2)
-#		fib_numba_lst.append(time3)
-#
-#	nnn=list(range(20,30+1))
-#	
-#	fig1, axs = plt.subplots(2,2)
-#	axs[0,0].stem(nn,fib_py_lst,linefmt='--')
-#	axs[0,0].set_title('fib_py')
-#	axs[0,1].stem(nn,fib_numba_lst,linefmt='--')
-#	axs[0,1].set_title('fib_numba')
-#	axs[1,0].stem(nn,fib_cpp_lst,linefmt='--')
-#	axs[1,0].set_title('fib_cpp')
-#	fig1.savefig("the_barchart.jpeg")
+	for n in range(30,45+1):
+
+		f = Person(n)
+
+		start1=pc()
+		f.fib()
+		end1=pc()
+		time1=round(end1-start1,2)
+		fib_cpp_lst.append(time1)
+
+		start2=pc()
+		fib_py(n)
+		end2=pc()
+		time2=round(end2-start2,2)
+		fib_py_lst.append(time2)
+		
+		start3=pc()
+		fib_numba(n)
+		end3=pc()
+		time3=round(end3-start3,2)
+		fib_numba_lst.append(time3)
+
+	nnn=list(range(20,30+1))
+	
+	fig1, axs = plt.subplots(2,2)
+	axs[0,0].stem(nn,fib_py_lst,linefmt='--')
+	axs[0,0].set_title('fib_py')
+	axs[0,1].stem(nn,fib_numba_lst,linefmt='--')
+	axs[0,1].set_title('fib_numba')
+	axs[1,0].stem(nn,fib_cpp_lst,linefmt='--')
+	axs[1,0].set_title('fib_cpp')
+	fig1.savefig("the_barchart.jpeg")
 
 	
 
