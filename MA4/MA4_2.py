@@ -55,8 +55,8 @@ def main():
 	axs[0,0].set_title('fib_py')
 	axs[0,1].stem(nn,fib_numba_lst,linefmt='--')
 	axs[0,1].set_title('fib_numba')
-	axs[1,:].stem(nn,fib_cpp_lst,linefmt='--')
-	axs[1,:].set_title('fib_cpp')
+	axs[1,0].stem(nn,fib_cpp_lst,linefmt='--')
+	axs[1,0].set_title('fib_cpp')
 	fig.savefig("the_barchart.jpeg")
 
 	
