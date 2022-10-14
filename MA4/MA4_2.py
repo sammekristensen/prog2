@@ -52,8 +52,11 @@ def main():
 	
 	fig, axs = plt.subplots(3)
 	axs[0].stem(nn,fib_py_lst)
+	axs[0].set_title('fib_py')
 	axs[1].stem(nn,fib_numba_lst)
+	axs[1].set_title('fib_numba')
 	axs[2].stem(nn,fib_cpp_lst)
+	axs[1].set_title('fib_cpp')
 	fig.savefig("the_barchart.jpeg")
 
 	
