@@ -17,11 +17,15 @@ def main():
 	#f.set(9)
 	#print(f.get())
 
-	start=pc()
+	start1=pc()
 	print(f"fib of {n} is: {f.fib()}")
-	end=pc()
-	print(f"k{round(end-start,2)}")
+	end1=pc()
+	print(f"time for c++: {round(end1-start1,2)}")
+
+	start2=pc()
 	print(fib_py(n))
+	end2=pc()
+	print(f"time for fib_py: {round(end2-start2,2)}")
 
 if __name__ == '__main__':
 	main()
